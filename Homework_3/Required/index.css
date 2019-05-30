@@ -1,0 +1,23 @@
+.container_left {
+    margin: 0 20px 0 0;
+    float: left;
+}
+.container_right{
+    margin: 0 20px 0 0;
+    float: right;   
+}
+a {
+                color: green;
+                font-weight: 700;
+                text-decoration: none; /*убирает подчеркивание под гиперссылкой*/
+            }
+.cyrsivtext {
+                font-style: italic;
+}
+sub, i {
+    font-style: italic;
+    color: blue;
+}
+body{
+    padding: 1em 20em 2em 3em;
+}

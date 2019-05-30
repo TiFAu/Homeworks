@@ -1,0 +1,92 @@
+*,
+*:before,
+*:after {
+            box-sizing: border-box;
+        }
+:root {
+         --color-back: #ddd;
+         --color-buton-legend:  tomato;
+       }
+body {
+        background-color: var(--color-back);
+    }
+
+.wrapper {
+            width: 60%;
+            position: relative;
+            display: flexbox;
+            flex-direction: row;
+            justify-content: flex-start;
+            background-color: #FFF;
+            padding: 1em;
+            flex-wrap: wrap;
+            left: 20%;
+            }
+.footer { 
+            width: 100%;
+           }
+p {
+    text-align: center;
+    }
+.legend1 {
+    color: var(--color-buton-legend);
+    margin: 25px 0 15px 0;
+
+}
+
+input, 
+select, 
+textarea {/*стилим многострочное поле вввода*/
+           width: 100%;
+           background-color: var(--color-back);
+           padding: 10px;
+           margin: 1em 0;
+           color: #000;
+           resize: none;
+          }
+select {/*прячет стандартную стрелку в select*/
+        -webkit-appearance: none;  
+        -moz-appearance: none;
+        appearance: none;
+        }
+.styled-select select {
+                        background: transparent;
+                        line-height: 1;
+                        -webkit-appearance: none;
+                        }                                            
+.styled-select {
+                overflow: hidden;
+                background: url(new_arrow.jpg) no-repeat right var(--color-back);
+                }
+
+input[type="checkbox"] {
+                        display:none;
+                        }
+input[type="checkbox"] + label span {
+                                        display:inline-block;
+                                        width:19px;
+                                        height:19px;
+                                        margin:-1px 4px 0 0;
+                                        vertical-align:middle;
+                                        background:url(check_radio_sheet.png) left top no-repeat;
+                                        cursor:pointer;
+                                    }
+input[type="checkbox"]:checked + label span {
+                                                background:url(check_radio_sheet.png) -19px top no-repeat;
+                                            }
+button { 
+        position: relative;
+        right: -85%;
+        /* top: 80px; */
+        height: 40px;
+        background-color: var(--color-buton-legend);
+        border-radius: 20px;
+        border: none;
+        color: #FFF;
+        /* float: right; */
+        }
+.submit {
+        display: flexbox;
+        justify-content: flex-end;
+        padding: 0 10px 0 0;
+} 

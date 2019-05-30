@@ -1,0 +1,60 @@
+body {
+        font-family: Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+        font-size: 14px;
+    }
+.footer { 
+        position: absolute;
+        bottom: 10px;
+        width: 100%;
+        }
+.footer p {
+            text-align: center;
+            }
+.wrappper{
+            width: 100%;
+            height: 40vh;
+            position: absolute;
+            display: block;
+        }
+article {
+            position: absolute;
+            box-sizing:border-box;
+            width:20%;
+            height:20%;
+            border: solid 1px;
+            padding:15px 10px;
+            box-shadow: 5px 5px 10px rgba(0,0,0,0.5);
+            background-color: #eee;
+        }
+#box1 { top:15%; left:10%; }
+#box2 { top:25%; left:20%; }
+#box3 { top:35%; left:30%; }
+#box4 { top:45%; left:40%; }
+  
+.lev1 { z-index: 1; }
+.lev2 { z-index: 2; }
+.lev3 { z-index: 3; }
+.lev4 { z-index: 4; }
+  
+.lev1:before { content: "z-index: 1;"; }
+.lev2:before { content: "z-index: 2;"; }
+.lev3:before { content: "z-index: 3;"; }
+.lev4:before { content: "z-index: 4;"; }
+  
+  
+body:before, body:after {
+    position:fixed;
+    font-size:11px;
+    left:10px;
+    color:#777;
+    font-style:italic;
+  }
+body:after {
+    bottom:10px;
+    content: "Элементы вне нормального потока ( к которым применен атрибут position:absolute или position:fixed ) могут перемещаться на передний / задний план с помощью CSS-атрибута z-index";
+  }
+body:before {
+    top:10px;
+    content: "Кликните по эелементу, чтобы переместить его на передний план";
+  }
+  

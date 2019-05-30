@@ -1,0 +1,169 @@
+*,
+*:before,
+*:after {
+	box-sizing: border-box;
+}
+body{
+	margin: 0;
+}
+img {
+	max-width: 100%;
+}
+main{
+	display: flex;
+	width: 100%;
+	flex-grow: 1;
+}
+.content{
+	flex-grow: 1;
+	padding: 10px;
+
+}
+.wrapper{
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+}
+.left{
+	flex-shrink: 0;
+	width: 200px;
+	padding: 10px;
+	background-color: #c798b8;
+	order: -1;
+}
+.right{
+	flex-shrink: 0;
+	width: 200px;
+	padding: 10px;
+	background-color:#9cb0c7;
+}
+
+.logo-picture{
+	width: 140px;
+}
+
+.main-header {
+	display: flex;
+	justify-content: space-between;
+	background-color: #ff0;
+	padding: 15px;
+}
+.bar-list {
+	display: flex;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+.bar-list li {
+	margin: 10px;
+}
+.bar-list a {
+	text-decoration: none;
+	color: #000;
+}
+
+.card-box{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+.card{
+	width: 30%;
+	margin-bottom: 20px;
+	padding: 10px 15px 50px;
+	border: 1px solid black;
+	border-radius: 15px;
+	text-align: center;
+	position: relative;
+}
+
+.card a{
+	text-decoration: none;
+	display: inline-block;
+	padding: 10px 25px;
+	border-radius: 3em;
+	border: 2px solid black;
+	position: absolute;
+	bottom: 10px;
+	left: 50%;
+	transform: translatex(-50%);
+}
+
+.image-box{
+	width: 50%;
+	margin: 0 auto;
+	border-radius: 50%;
+	overflow: hidden;
+	border: 5px solid blue;
+}
+
+.image-box img{
+	vertical-align: top;
+}
+
+.page-footer {
+	padding: 10px 15px;
+	background-color: rgba(0, 255, 0, .5);
+}
+
+@media (max-width: 1023px) {
+	.left{
+		width: 50%;
+		order: 0;
+	}
+	main{
+		flex-wrap: wrap;
+	}
+	.right{
+		width: 50%;
+	}
+	.content{
+		width: 100%;
+	}
+
+	.card{
+		width: 45%;
+	}
+}
+
+@media (max-width: 767px){
+
+	.main-header {
+		display: block;
+		text-align: center;
+		padding-bottom: 0;
+	}
+	
+	.bar-list{
+		display: block;
+	}
+
+	.bar-list a{
+		display: block;
+		padding: 10px 5px;
+		border-bottom: 2px solid black;
+	}
+	
+	.bar-list li{
+		margin: 0;
+	}
+
+	.bar-list li:last-child a{
+		border-bottom: 0;
+	}
+
+	.left{
+		width: 100%;
+	}
+
+	.right{
+		width: 100%;
+	}
+}
+
+@media (max-width: 500px){
+	.card{
+		width: 100%;
+	}
+}

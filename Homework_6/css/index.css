@@ -1,0 +1,139 @@
+*,
+*:before,
+*:after {
+            box-sizing: border-box;
+        }
+:root {
+         --color-back: #ddd;
+         --color-buton-legend:  tomato;
+         --height-buttom: 50px;
+       }
+@font-face {
+  font-family: 'icomoon';
+  src:  url('../fonts/icomoon.eot?50mdas');
+  src:  url('../fonts/icomoon.eot?50mdas#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon.ttf?50mdas') format('truetype'),
+    url('../fonts/icomoon.woff?50mdas') format('woff'),
+    url('../fonts/icomoon.svg?50mdas#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  color: #FFF;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-google-plus3:before {
+  content: "\ea8d";
+}
+.icon-tumblr2:before {
+  content: "\eaba";
+}
+.icon-yahoo:before {
+  content: "\eabb";
+}
+.icon-wikipedia:before {
+  content: "\eac8";
+}
+body {
+        background-color: var(--color-back);
+    }
+.a-form {
+            width: 60%;
+            margin-left: 20%;
+            background-color: #FFF;
+            padding: 1em;
+            display: flex;
+            flex-direction: column;  /*смена направления главной оси с влева направо сверху вниз*/
+            /* align-items: flex-start;
+            flex-wrap: wrap; */
+        }
+.footer_p {
+            text-align: center;
+          }
+.a-form__legend {
+                  color: var(--color-buton-legend);
+                  margin: 25px 0 0 0;
+                }
+
+.a-form__input, 
+.a-form__select, 
+.a-form__textarea {/*стилим многострочное поле вввода*/
+                    background-color: var(--color-back);
+                    padding: 10px;
+                    margin: 0.5em 0 1em 0;
+                    resize: none;
+                  }
+.a-form__select {/*прячет стандартную стрелку в select*/
+                  -webkit-appearance: none;  
+                  -moz-appearance: none;
+                  appearance: none;
+                  }
+.a-form__select select {
+                        background: transparent;
+                        line-height: 1;
+                        -webkit-appearance: none;
+                        }                                            
+.a-form__select {
+                    overflow: hidden;
+                    background: url(new_arrow.jpg) no-repeat right var(--color-back);
+                }
+input[type="checkbox"] {
+                            display:none;
+                        }
+input[type="checkbox"] + label span {
+                                        display:inline-block;
+                                        width:19px;
+                                        height:19px;
+                                        margin:-1px 4px 0 0;
+                                        vertical-align:middle;
+                                        background:url(check_radio_sheet.png) left top no-repeat;
+                                        cursor:pointer;
+                                    }
+input[type="checkbox"]:checked + label span {
+                                                background:url(check_radio_sheet.png) -19px top no-repeat;
+                                            }
+.a-form__button { 
+                    font-size: 12px;
+                    padding: 0 20px;
+                    height: 40px;
+                    border-radius: 20px;
+                    background-color: var(--color-buton-legend);
+                    border: none;
+                    color: #FFF;
+                    margin:  25px;
+                    align-self: flex-end;
+                }
+.contejner{
+ 
+            width: calc(var(--height-buttom)*2.5);
+            padding: 5px;
+            position: relative;
+            left: 10%
+            }
+.contejner button
+                {
+                    height: var(--height-buttom);
+                    width: var(--height-buttom);
+                    border-radius: calc(var(--height-buttom)/2);
+                    background-color: var(--color-buton-legend);
+                    border: none;
+                    margin: 2px;
+                    /* background-repeat: no-repeat;              
+                    background-size: var(--height-buttom);                 
+                    background-position: center center; */
+                }
+
+

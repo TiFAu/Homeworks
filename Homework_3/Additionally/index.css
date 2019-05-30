@@ -1,0 +1,61 @@
+*,
+*:before,
+*:after {
+            box-sizing: border-box;
+        }
+:root{
+        --card-lift: -20px;     /*поднятие карты*/
+        --card-left: -20deg;    /*угол поворота левой карты*/
+        --card-centr: -10deg;   /*угол поворота центральной карты*/
+        --card-right: 10deg;    /*угол поворота правой карты*/
+        --indent: 110px;        /*определяет взаимное положение карт*/
+        }
+body {
+        background-color: #0d5825;
+    }
+p, address {
+            font-size: 25px;
+            color: aliceblue;
+            text-align: center;
+            }
+.wrapper {
+            text-align: center;
+            padding: 5em;
+            }
+.card-left, 
+.card-centr,
+.card-right {
+             position: relative;
+             display: inline-block;
+             width:150px;                               /*ширина карты*/
+             height:200px;                              /*высота карты*/
+             background-image: url(./card01.png);       /*картинака карты*/
+             background-repeat: no-repeat;              /*поаторение фоновой картинки выключено*/  
+             background-size: contain;                  /*Масштабирует фоновое изображение согласно заданным размерам*/
+             background-position: center center;        /*Задает начальное положение фонового изображения, установленного с помощью свойства background-image.*/
+             transition-property: transform;            /*Содержит название CSS-свойств, к которым будет применен эффект перехода*/
+             transition-duration: 0.4s;                 /*Задаёт промежуток времени, в течение которого должен осуществляться переход*/
+             transition-timing-function: ease;          /*функция перехода*/
+            }
+.card-left  {
+                left: var(--indent);
+                bottom: 7px;
+                transform: rotate(var(--card-left));
+             }
+.card-centr {
+                transform: rotate(var(--card-centr));
+            }
+.card-right {
+                right: var(--indent);
+                top: 15px; 
+                transform: rotate(var(--card-right));
+            }
+.card-left:hover {
+                    transform: rotate(var(--card-left)) translate(0px,var(--card-lift));        /*поворачивает против часовой и сдвигает элемент на новое место, перемещая относительно обычного положения вправо и вниз*/
+                }
+.card-centr:hover {
+                    transform: rotate(var(--card-centr)) translate(0px,var(--card-lift));        /*поворачивает против часовой и сдвигает элемент на новое место, перемещая относительно обычного положения вправо и вниз*/
+                }
+.card-right:hover {
+                    transform: rotate(var(--card-right)) translate(0px,var(--card-lift));        /*поворачивает по часовой и сдвигает элемент на новое место, перемещая относительно обычного положения вправо и вниз*/
+                }
