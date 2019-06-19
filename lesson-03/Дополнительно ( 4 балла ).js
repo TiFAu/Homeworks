@@ -15,13 +15,13 @@ var objectMyThree = {
                     }
 
 
-function userInfo(object){  
-                            this.name = object.name;
-                            this.data = object.data;
-                            this.registered = object.registered;
-                            console.log(
-                                        this.registered ? `Дата регистрации : ${this.data}` : `Незарегистрированный пользователь : ${this.name}`
-                                        )
+function userInfo(){  
+    console.log(
+        this.registered ? 
+            `Дата регистрации: ${this.data}`  :  
+            `Незарегистрированный пользователь: ${this.name}`
+        )
+}
                         }
 objectMyOne.getInfo = userInfo;
 objectMyTwo.getInfo = userInfo;
@@ -30,7 +30,11 @@ objectMyThree.getInfo = userInfo;
 
 objectMyOne.getInfo (objectMyOne)
 objectMyTwo.getInfo (objectMyTwo)
-bjectMyThree.getInfo (bjectMyThree)
+objectMyThree.getInfo (objectMyThree)
+
+objectMyOne.getInfo ()
+objectMyTwo.getInfo ()
+objectMyThree.getInfo ()
 
 /////////////////////////////////
 
