@@ -1,7 +1,7 @@
 var objectMyOne =   {
-                    name: "Антон",
-                    data: "22.8.1979",
-                    registered: true
+                        name: "Антон",
+                        data: "22.8.1979",
+                        registered: true
                     }
 var objectMyTwo = {
                     name: "Галина",
@@ -9,10 +9,10 @@ var objectMyTwo = {
                     registered: true
                     }
 var objectMyThree = {
-            name: "Коля",
-            data: "",
-            registered: false
-            }
+                        name: "Коля",
+                        data: "",
+                        registered: false
+                    }
 
 
 function userInfo(object){  
@@ -25,7 +25,13 @@ function userInfo(object){
                         }
 objectMyOne.getInfo = userInfo;
 objectMyTwo.getInfo = userInfo;
-bjectMyThree.getInfo = userInfo;
+objectMyThree.getInfo = userInfo;
+
+
+objectMyOne.getInfo (objectMyOne)
+objectMyTwo.getInfo (objectMyTwo)
+bjectMyThree.getInfo (bjectMyThree)
+
 /////////////////////////////////
 
 var objectMyTwo = Object.create(objectMyOne);
