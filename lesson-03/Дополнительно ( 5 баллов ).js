@@ -64,11 +64,11 @@ var comments = {
 function getCurrentPostComments ( postId ) {
     var res = []
     for ( var comment in comments ){
-        if (comments[comment]["postId"] == postId ){ 
+        if (comments[comment]['postId'] == postId ){ 
             for ( var user in users ) {
-                if ( user == comments[comment]["author"] )
+                if ( user == comments[comment]['author'] )
                     res.push ({
-                                autor: users[user]["name"],
+                                autor: users[user]['name'],
                                 text: comments[comment]['text']
                     })
             }
