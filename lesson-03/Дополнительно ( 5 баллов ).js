@@ -62,19 +62,19 @@ var comments = {
 }
 
 function getCurrentPostComments ( postId ) {
-        var res = []
-        for ( var comment in comments ){
-             if (comments[comment]["postId"] == postId ){ 
-                        for ( var user in users ) {
-                                if ( user == comments[comment]["author"] )
-                                        res.push ({
-                                                        autor: users[user]["name"],
-                                                        text: comments[comment]['text']
-                                        })
-                                }
-                        }
+    var res = []
+    for ( var comment in comments ){
+        if (comments[comment]["postId"] == postId ){ 
+            for ( var user in users ) {
+                if ( user == comments[comment]["author"] )
+                    res.push ({
+                                autor: users[user]["name"],
+                                text: comments[comment]['text']
+                    })
             }
-        return res
         }
+    }
+    return res
+}
 
 console.log ( getCurrentPostComments ( 7891451 ) )
