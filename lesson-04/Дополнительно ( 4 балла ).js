@@ -2,19 +2,18 @@ function LibraryBook ( title, year, author ) {
     var title = title;
     var year = year;
     var author = author;
-    var readerName = null;
+	var readerName = null;
     var readerData = null;
     function giveTheBook ( client ){
         readerName = client;
         readerData = new Date ();   
     }
     this.getBookInfo = function(){ // Возможно малость не по ТЗ и все же веселее как по мне ;-)
-        if ( readerData !==null ){ console.log ( `Эту книгу счастливо заполучил ${readerName} аж ${readerData.toDateString()} !!!`)
-        }
-        else {console.log (`Данная книга пылится на полке`)}
+        ( readerData == null ) ? console.log (`Данная книга пылится на полке`) :
+        console.log ( `Эту книгу счастливо заполучил ${readerName} аж ${readerData.toDateString()} !!!`) ;
     };
     this.getTheBook = function ( client ){ // функция выдачи книги клиенту, коли конечно книга пылится на полке
-        if ( readerData !==null ){
+        if ( readerData ){
             return null;
         }
         else {
