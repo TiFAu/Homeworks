@@ -9,8 +9,9 @@ function LibraryBook ( title, year, author ) {
         readerData = new Date ();   
     }
     this.getBookInfo = function(){ // Возможно малость не по ТЗ и все же веселее как по мне ;-)
-        ( readerData == null ) ? console.log (`Данная книга пылится на полке`) :
-        console.log ( `Эту книгу счастливо заполучил ${readerName} аж ${readerData.toDateString()} !!!`) ;
+        ( readerData == null ) ?
+            console.log (`Данная книга пылится на полке`) :
+            console.log ( `Эту книгу счастливо заполучил ${readerName} аж ${readerData.toDateString()} !!!`) ;
     };
     this.getTheBook = function ( client ){ // функция выдачи книги клиенту, коли конечно книга пылится на полке
         if ( readerData ){
