@@ -96,6 +96,17 @@ for (var x in persons){
     }
 // 9.serialize
 // Создайте JSON-строку из persons
-var myJsonString = JSON.stringify (persons)
+    var myJsonString = JSON.stringify (persons)
 // 10.deserialize
 // Создайте ассоциативный массив с одной персоной из JSON-строки. Добавьте её в persons
+    var danj = `{"name":"Даниил","surname":"Марынич","position":"director"}`
+    persons[4] = JSON.parse(danj)
+// 11.HTML
+// Сделайте цикл, который выводит весь массив persons, в форме HTML-таблицы. Имя и Фамилия - колонки. Таблицы в HTML Пример кода:
+    var str = "<table border='1'><tr style = 'background-color : green;'><td>Имя</td><td>Фамилия</td></tr>"
+    for (let i = 0; i < persons.length; i++){
+        str += `<tr><td>${persons[i]['name']}</td><td>${persons[i]['surname']}</td></tr>`
+    }
+    str += "</table>"
+    //console.log(str)
+    document.write(str)
