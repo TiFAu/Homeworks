@@ -1,4 +1,4 @@
-var persons = [a, b, c]
+let persons = [a, b, c]
 persons[ 3 ] = {
     name: "Антон",
     surname: "Турчин",
